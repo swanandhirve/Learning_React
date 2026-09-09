@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100vh !important;
+  width: 100vw !important;
+}
+
+/* #colorChanger {
+  height: 100% !important;
+    width: 100% !important;
+} */
+
+.btn {
+  width: 200px;
+  height: 60px;
+  border-radius: 5px;
+  background-color: rgb(145, 107, 37);
+  border: none;
+  font-size: large;
+  color: white;
+  font-weight: 200;
+}
+
+.btn:hover {
+  background-color: rgb(136, 104, 46);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The container wrapper */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide the native checkbox browser styling completely */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider background track */
+.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px; /* Makes the track pill-shaped */
+  transition: 0.4s;   /* Smooth color transition */
+}
+
+/* The sliding knob (the white circle) */
+.switch .slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%; /* Makes the knob a perfect circle */
+  transition: 0.4s;   /* Smooth sliding motion */
+}
+
+/* --- THE STATE CHANGES --- */
+
+/* Change track background color when checked */
+.switch input:checked + .slider {
+  background-color: #2196F3; /* Modern blue toggle color */
+}
+
+/* Move the slider knob to the right when checked */
+.switch input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+/* Optional: Add a focus ring for accessibility when using keyboard navigation */
+.switch input:focus-visible + .slider {
+  box-shadow: 0 0 4px #2196F3;
+}
+
+.text-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
